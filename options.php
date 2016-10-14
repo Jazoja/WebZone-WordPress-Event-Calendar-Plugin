@@ -86,6 +86,7 @@ class ec3_Options
     $this->myfiles=get_option('siteurl').'/wp-content/plugins/'.$mydir;
     $this->schedule=$table_prefix.$this->schedule; // table name
 
+    /* This made errors on newer systems so disabled it. By the way, I think this part is obsolete now.
     // wp_version < 2.0
     if(ereg('^1[.]',$wp_version))
     {
@@ -102,7 +103,7 @@ class ec3_Options
     {
       $this->wp_have_categories=true;
     }
-
+    */
     $this->read_event_category();
     $this->read_show_only_events();
     $this->read_num_months();
